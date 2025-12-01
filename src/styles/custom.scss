@@ -1,0 +1,11 @@
+$dev-primary: #4338ca;
+$dev-accent: #eab308;
+
+.developer-logo {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  span {
+    color: $dev-accent;
+  }
+}
