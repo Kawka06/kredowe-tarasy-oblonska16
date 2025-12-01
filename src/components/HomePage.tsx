@@ -6,11 +6,23 @@ interface GalleryImage {
   alt: string;
 }
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const galleryImages: GalleryImage[] = [
-  { src: '/assets/inwestycja-1.png', alt: 'Widok kamienicy od ulicy Obłońskiej' },
-  { src: '/assets/inwestycja-2.png', alt: 'Elewacja kamienicy Kredowe Tarasy' },
-  { src: '/assets/inwestycja-3.png', alt: 'Wizualizacja z dziedzińcem' },
+  {
+    src: `${BASE_URL}assets/inwestycja-1.png`,
+    alt: 'Widok kamienicy od ulicy Obłońskiej',
+  },
+  {
+    src: `${BASE_URL}assets/inwestycja-2.png`,
+    alt: 'Wejście główne do kamienicy Kredowe Tarasy',
+  },
+  {
+    src: `${BASE_URL}assets/inwestycja-3.png`,
+    alt: 'Balkony od strony dziedzińca',
+  },
 ];
+
 
 const HomePage: React.FC = () => {
   return (
@@ -31,11 +43,12 @@ const InvestmentHeroSection: React.FC = () => {
       className="relative min-h-[70vh] flex items-center justify-center overflow-hidden"
     >
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/assets/hero-inwestycja.png')",
-        }}
+      className="absolute inset-0 bg-cover bg-center"
+      style={{
+      backgroundImage: `url('${BASE_URL}assets/hero-inwestycja.png')`,
+      }}
       />
+
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-900/50 to-slate-900/80" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
@@ -212,9 +225,10 @@ const ReservationSection: React.FC = () => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/assets/rezerwacja-bg.png')",
+        backgroundImage: `url('${BASE_URL}assets/rezerwacja-bg.png')`,
         }}
       />
+
       <div className="absolute inset-0 bg-slate-900/70" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 text-center text-white">
