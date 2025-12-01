@@ -7,6 +7,9 @@ import App from './App';
 import './index.css';
 import './styles/custom.scss';
 
+const basename = import.meta.env.BASE_URL;
+
+
 const container = document.getElementById('root') as HTMLElement;
 const root = ReactDOM.createRoot(container);
 
